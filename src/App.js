@@ -1,7 +1,15 @@
 import React from "react";
+import Header from "./Header";
+import Footer from "./Footer";
 
 function App() {
-  return <h1>React</h1>;
+  return (
+    <>
+      <Header />
+      <h2>React</h2>
+      <Footer />
+    </>
+  );
 }
 
 export default App;
