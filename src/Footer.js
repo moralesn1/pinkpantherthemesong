@@ -5,7 +5,9 @@ export default function Footer() {
 
   return (
     <>
-      <h3>{year}</h3>
+      <div>
+        <h4>Nathaniel Morales {year}</h4>
+      </div>
     </>
   );
 }

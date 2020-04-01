@@ -1,12 +1,19 @@
 import React from "react";
 import Header from "./Header";
+import NavigationBar from "./NavigationBar";
 import Footer from "./Footer";
+import LandingPage from "./LandingPage";
+import ProjectsPage from "./ProjectsPage";
+import SkillsPage from "./SkillsPage";
 
 function App() {
   return (
     <>
       <Header />
-      <h2>React</h2>
+      <LandingPage />
+      <NavigationBar />
+      <SkillsPage />
+      <ProjectsPage />
       <Footer />
     </>
   );
