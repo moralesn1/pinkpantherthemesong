@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./Header";
 import NavigationBar from "./NavigationBar";
 import Footer from "./Footer";
@@ -9,12 +10,16 @@ import SkillsPage from "./SkillsPage";
 function App() {
   return (
     <>
-      <Header />
-      <LandingPage />
-      <NavigationBar />
-      <SkillsPage />
-      <ProjectsPage />
-      <Footer />
+      <Router>
+        <Switch>
+          <Route path="/" exact component={LandingPage} />
+          <Route path="/skills" exact component={SkillsPage} />
+          <Route path="/portfolio" exact component={ProjectsPage} />
+        </Switch>
+        <NavigationBar />
+
+        <Footer />
+      </Router>
     </>
   );
 }
