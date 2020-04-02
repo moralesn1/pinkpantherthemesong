@@ -1,0 +1,31 @@
+body {
+  background-color: black;
+  color: aliceblue;
+}
+
+.landingpage {
+  text-align: center;
+}
+
+.navigation-links {
+  text-align: center;
+}
+
+.footer {
+  text-align: center;
+  position: fixed;
+  bottom: 50px;
+  display: flex;
+  align-self: center;
+  right: 41%;
+}
+
+.skills-page-title {
+  text-align: center;
+}
+
+.skills-page-box {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}

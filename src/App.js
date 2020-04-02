@@ -7,19 +7,29 @@ import LandingPage from "./LandingPage";
 import ProjectsPage from "./ProjectsPage";
 import SkillsPage from "./SkillsPage";
 
+// Bootstrap
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Container } from "react-bootstrap";
+
+// Styling
+import "./app.css";
+
 function App() {
   return (
     <>
-      <Router>
-        <Switch>
-          <Route path="/" exact component={LandingPage} />
-          <Route path="/skills" exact component={SkillsPage} />
-          <Route path="/portfolio" exact component={ProjectsPage} />
-        </Switch>
-        <NavigationBar />
+      <Container>
+        <Header />
 
-        <Footer />
-      </Router>
+        <Router>
+          <Switch>
+            <Route path="/" exact component={LandingPage} />
+            <Route path="/skills" exact component={SkillsPage} />
+            <Route path="/portfolio" exact component={ProjectsPage} />
+          </Switch>
+          <NavigationBar />
+          <Footer />
+        </Router>
+      </Container>
     </>
   );
 }
