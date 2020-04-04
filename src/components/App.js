@@ -12,14 +12,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Container } from "react-bootstrap";
 
 // Styling
-import "./app.css";
+import "../app.css";
 
 function App() {
+  const year = new Date().getFullYear();
   return (
     <>
       <Container>
-        <Header />
-
         <Router>
           <Switch>
             <Route path="/" exact component={LandingPage} />
@@ -27,9 +26,9 @@ function App() {
             <Route path="/portfolio" exact component={ProjectsPage} />
           </Switch>
           <NavigationBar />
-          <Footer />
         </Router>
       </Container>
+      <Footer />
     </>
   );
 }
