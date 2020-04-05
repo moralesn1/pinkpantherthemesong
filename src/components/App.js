@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Header from "./Header";
 import NavigationBar from "./NavigationBar";
 import Footer from "./Footer";
 import LandingPage from "./LandingPage";
@@ -15,7 +14,6 @@ import { Container } from "react-bootstrap";
 import "../app.css";
 
 function App() {
-  const year = new Date().getFullYear();
   return (
     <>
       <Container>
