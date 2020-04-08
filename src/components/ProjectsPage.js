@@ -7,7 +7,12 @@ export default function ProjectsPage() {
   function createCard(item, index) {
     return (
       <Col key={index} className="projectcard" xs={12} md={6} lg={4} xl={4}>
-        <ProjectCard key={index} title={item.title} text={item.text} />
+        <ProjectCard
+          key={index}
+          img={item.img}
+          title={item.title}
+          text={item.text}
+        />
       </Col>
     );
   }
