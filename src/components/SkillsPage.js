@@ -1,80 +1,55 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import SkillsCard from "./SkillsCard";
+// Data
+import generalData from "../data/generalData";
+import languageData from "../data/languageData";
+import librariesData from "../data/librariesData";
 
 export default function SkillsPage() {
+  console.log(
+    generalData.map((item, index) => {
+      return item.name;
+    })
+  );
+
+  console.log(
+    languageData.map((item, index) => {
+      return item.name;
+    })
+  );
+
+  console.log(
+    librariesData.map((item, index) => {
+      return item.name;
+    })
+  );
+
+  function createSkillsPage(item, index) {
+    return <SkillsCard key={index} img={item.img} name={item.name} />;
+  }
   return (
     <>
       <Container>
         <h3 className="skills-page-title">Skills Page</h3>
         <Row>
           <Col>
-            <div className="skills-page-box">
-              Languages
-              <div className="skills-page-items">
-                <div className="skills-page-item">
-                  <p>imgIcon</p>Ruby
-                </div>
-                <div className="skills-page-item">
-                  <p>imgIcon</p>JavaScript
-                </div>
-                <div className="skills-page-item">
-                  <p>imgIcon</p>TypeScipt
-                </div>
-                <div className="skills-page-item">
-                  <p>imgIcon</p>HTML5
-                </div>
-                <div className="skills-page-item">
-                  <p>imgIcon</p>CSS
-                </div>
-              </div>
-            </div>
+            <Container className="skills-card-column">
+              <h5>Languages</h5>
+              {languageData.map(createSkillsPage)}
+            </Container>
           </Col>
           <Col>
-            <div className="skills-page-box">
-              Frameworks and Libraries
-              <div className="skills-page-items">
-                <div className="skills-page-item">
-                  <p>imgIcon</p>Rails
-                </div>
-                <div className="skills-page-item">
-                  <p>imgIcon</p>React
-                </div>
-                <div className="skills-page-item">
-                  <p>imgIcon</p>Angular
-                </div>
-                <div className="skills-page-item">
-                  <p>imgIcon</p>Node
-                </div>
-                <div className="skills-page-item">
-                  <p>imgIcon</p>Bootstrap
-                </div>
-              </div>
-            </div>
+            <Container className="skills-card-column">
+              <h5>Frameworks and Libraries</h5>
+              {librariesData.map(createSkillsPage)}
+            </Container>
           </Col>
           <Col>
-            <div className="skills-page-box">
-              General
-              <div className="skills-page-items">
-                <div className="skills-page-item">
-                  <p>imgIcon</p>Git
-                </div>
-                <div className="skills-page-item">
-                  <p>imgIcon</p>Github
-                </div>
-                <div className="skills-page-item">
-                  <p>imgIcon</p>PostgreSQL
-                </div>
-                <div className="skills-page-item">
-                  <p>imgIcon</p>Hasura GraphQL
-                </div>
-                <div className="skills-page-item">
-                  <p>imgIcon</p>MongoDB
-                </div>
-                <div className="skills-page-item">
-                  <p>imgIcon</p>Heroku
-                </div>
-              </div>
-            </div>
+            <Container className="skills-card-column">
+              <h5>General</h5>
+              {generalData.map(createSkillsPage)}
+            </Container>
           </Col>
         </Row>
       </Container>
