@@ -67,11 +67,35 @@ h3.projectspage-title {
   padding-bottom: 1.5em;
 }
 
-.skills-page-block.container {
+.skills-title {
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1.5em;
+}
+
+.col-xl-4.col-lg-3.col-md-3.col-sm-12.col-12.skills-container {
+  text-align: center;
   border-style: solid;
   border-color: ivory;
   padding-bottom: 2em;
   border-radius: 25px;
   margin-top: 2em;
   margin-bottom: 2em;
+  justify-content: center;
+  margin-right: 1em;
+  margin-left: 1em;
+}
+
+.skills-page-row {
+  justify-content: center;
+}
+.skills-container.col-xl-3.col-lg-3.col-md-3.col-sm-12.col-12 {
+  border-style: solid;
+  margin-left: 1em;
+  margin-right: 1em;
+  border-radius: 25px;
+  border-color: ivory;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }

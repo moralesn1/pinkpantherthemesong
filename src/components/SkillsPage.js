@@ -14,37 +14,47 @@ export default function SkillsPage() {
     <>
       <Container>
         <h3 className="skills-page-title">Skills Page</h3>
-        <Container className="skills-page-block">
-          <Col>
-            <Row>
-              <Col lg={12} className="skills-title">
-                <h5>Languages</h5>
-              </Col>
 
-              {languageData.map(createSkillsPage)}
-            </Row>
+        <Row className="skills-page-row">
+          <Col
+            xl={3}
+            lg={3}
+            md={3}
+            sm={12}
+            xs={12}
+            className="skills-container"
+          >
+            <h5 className="skills-title">Languages</h5>
+
+            {languageData.map(createSkillsPage)}
           </Col>
-        </Container>
-        <Container className="skills-page-block">
-          <Col>
-            <Row>
-              <Col lg={12} className="skills-title">
-                <h5>Frameworks and Libraries</h5>
-              </Col>
-              {librariesData.map(createSkillsPage)}
-            </Row>
+
+          <Col
+            xl={3}
+            lg={3}
+            md={3}
+            sm={12}
+            xs={12}
+            className="skills-container"
+          >
+            <h5 className="skills-title">Frameworks and Libraries</h5>
+
+            {librariesData.map(createSkillsPage)}
           </Col>
-        </Container>
-        <Container className="skills-page-block">
-          <Col>
-            <Row>
-              <Col lg={12} className="skills-title">
-                <h5>General</h5>
-              </Col>
-              {generalData.map(createSkillsPage)}
-            </Row>
+
+          <Col
+            xl={3}
+            lg={3}
+            md={3}
+            sm={12}
+            xs={12}
+            className="skills-container"
+          >
+            <h5 className="skills-title">General</h5>
+
+            {generalData.map(createSkillsPage)}
           </Col>
-        </Container>
+        </Row>
       </Container>
     </>
   );
