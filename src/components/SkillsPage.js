@@ -7,24 +7,6 @@ import languageData from "../data/languageData";
 import librariesData from "../data/librariesData";
 
 export default function SkillsPage() {
-  console.log(
-    generalData.map((item, index) => {
-      return item.name;
-    })
-  );
-
-  console.log(
-    languageData.map((item, index) => {
-      return item.name;
-    })
-  );
-
-  console.log(
-    librariesData.map((item, index) => {
-      return item.name;
-    })
-  );
-
   function createSkillsPage(item, index) {
     return <SkillsCard key={index} img={item.img} name={item.name} />;
   }
@@ -32,26 +14,37 @@ export default function SkillsPage() {
     <>
       <Container>
         <h3 className="skills-page-title">Skills Page</h3>
-        <Row>
+        <Container className="skills-page-block">
           <Col>
-            <Container className="skills-card-column">
-              <h5>Languages</h5>
+            <Row>
+              <Col lg={12} className="skills-title">
+                <h5>Languages</h5>
+              </Col>
+
               {languageData.map(createSkillsPage)}
-            </Container>
+            </Row>
           </Col>
+        </Container>
+        <Container className="skills-page-block">
           <Col>
-            <Container className="skills-card-column">
-              <h5>Frameworks and Libraries</h5>
+            <Row>
+              <Col lg={12} className="skills-title">
+                <h5>Frameworks and Libraries</h5>
+              </Col>
               {librariesData.map(createSkillsPage)}
-            </Container>
+            </Row>
           </Col>
+        </Container>
+        <Container className="skills-page-block">
           <Col>
-            <Container className="skills-card-column">
-              <h5>General</h5>
+            <Row>
+              <Col lg={12} className="skills-title">
+                <h5>General</h5>
+              </Col>
               {generalData.map(createSkillsPage)}
-            </Container>
+            </Row>
           </Col>
-        </Row>
+        </Container>
       </Container>
     </>
   );
